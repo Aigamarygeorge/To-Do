@@ -1,15 +1,34 @@
 function addTask() {
-    const taskInput = document.getElementById("taskInput");
-    const taskList = document.getElementById("taskList");
+  var taskInput = document.getElementById("taskInput");
+  var taskList = document.getElementById("taskList");
 
-    if (taskInput.value !== "") {
-      const li = document.createElement("li");
-      li.appendChild(document.createTextNode(taskInput.value));
-      taskList.appendChild(li);
-      taskInput.value = "";
-
-      li.addEventListener("click", function() {
-        this.remove();
-      });
-    }
+  if (taskInput.value === '') {
+    alert("Please enter a task!");
+    return;
   }
+
+  var li = document.createElement("li");
+  li.textContent = taskInput.value;
+
+  var deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  deleteButton.onclick = function() {
+    li.remove();
+  };
+
+  var editButton = document.createElement("button");
+  editButton.textContent = "Edit";
+  editButton.onclick = function() {
+    var newText = prompt("Edit the task", li.textContent);
+    if (newText !== null) {
+      li.textContent = newText;
+    }
+  };
+
+  li.appendChild(deleteButton);
+  li.appendChild(editButton);
+  taskList.appendChild(li);
+
+  taskInput.value = '';
+}
+            
