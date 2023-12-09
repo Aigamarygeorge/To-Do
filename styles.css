@@ -1,46 +1,50 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
-  .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
 
-  input[type="text"] {
-    width: 60%;
-    padding: 8px;
-    margin-bottom: 10px;
-  }
+h1 {
+  text-align: center;
+  color: #333;
+}
 
-  button {
-    padding: 8px 20px;
-    border: none;
-    background-color: #4caf50;
-    color: white;
-    cursor: pointer;
-  }
+input[type="text"] {
+  width: 70%;
+  padding: 8px;
+}
 
-  button:hover {
-    background-color: #45a049;
-  }
+button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-  }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  li {
-    margin-bottom: 8px;
-  }
+li {
+  margin: 8px 0;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
